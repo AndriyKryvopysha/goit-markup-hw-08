@@ -1,0 +1,72 @@
+/* Команда */
+
+.team {
+  background-color: $buttonWhite;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team__title {
+  @extend %titleStyle;
+}
+
+.team__list {
+  @extend %centeredFlex;
+  @extend %marginCentered;
+  margin-top: 0px;
+  background-color: $buttonWhite;
+}
+
+.member {
+  background-color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 270px;
+  text-align: center;
+  margin-right: 30px;
+  padding-bottom: 0px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.member__discription {
+  padding-top: 30px;
+  margin-bottom: 16px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  @extend %marginCentered;
+}
+
+.proffesion {
+  color: $greyColor;
+  font-size: 16px;
+  line-height: 1.19;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  @extend %marginCentered;
+}
+
+.member__links {
+  width: 270px;
+  @extend %marginCentered;
+  padding-bottom: 30px;
+}

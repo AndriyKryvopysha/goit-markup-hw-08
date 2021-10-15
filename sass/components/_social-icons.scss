@@ -1,0 +1,35 @@
+/* ==Social Icons== */
+
+.social-links__list {
+  @extend %centeredFlex;
+  align-content: center;
+}
+
+.social-links__link {
+  @extend %centeredFlex;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  margin-left: 10px;
+  border-radius: $roundBorder;
+  color: #afb1b8;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $blueColor;
+    color: $whiteColor;
+  }
+
+  &--first {
+    margin-left: 0px;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

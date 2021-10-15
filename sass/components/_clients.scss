@@ -1,0 +1,46 @@
+/* ===Clients Icons== */
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients__title {
+  @extend %titleStyle;
+}
+
+.clients__list {
+  @extend %centeredFlex;
+  align-content: center;
+  margin-top: 0px;
+  @extend %marginCentered;
+}
+
+.clients__link {
+  @extend %centeredFlex;
+  align-items: center;
+  height: 92px;
+  width: 170px;
+  border: 1px $LinkColor solid;
+  border-radius: 4px;
+  color: $LinkColor;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: $blueColor;
+    color: $blueColor;
+  }
+}
+
+.clients__member:not(:first-child) {
+  margin-left: 30px;
+}
+
+.clients__icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}

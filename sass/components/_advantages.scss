@@ -1,0 +1,56 @@
+/* Page 1 Преимущества */
+
+.advantages {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advantages__list {
+  @extend %centeredFlex;
+}
+
+.advantage__item {
+  display: block;
+  text-align: left;
+  width: 270px;
+  padding-right: 0px;
+
+  & + & {
+    margin-left: 30px;
+    margin-right: 0px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $buttonWhite;
+    padding-right: 0;
+  }
+}
+
+@each $iconsName in $icons {
+  .icon-#{$iconsName}::before {
+    background-size: 66px 70px;
+    background-image: url(../images/svg/#{$iconsName}.svg);
+  }
+}
+
+.advantages__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+.advantages__text {
+  line-height: 1.71;
+  color: $greyColor;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 15px;
+}

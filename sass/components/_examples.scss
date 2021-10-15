@@ -1,0 +1,43 @@
+/* Примеры */
+
+.example {
+  padding-bottom: 94px;
+}
+
+.example__title {
+  @extend %titleStyle;
+}
+
+.example__list {
+  @extend %centeredFlex;
+  @extend %marginCentered;
+}
+
+.example__item {
+  position: relative;
+
+  & + & {
+    margin-left: 30px;
+  }
+}
+
+.example__image {
+  display: block;
+}
+
+.example__text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  @extend %centeredFlex;
+  align-items: center;
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $whiteColor;
+  background: rgba(47, 48, 58, 0.8);
+}

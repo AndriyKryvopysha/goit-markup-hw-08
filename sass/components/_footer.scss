@@ -1,0 +1,142 @@
+/* Подвал */
+
+footer {
+  background-color: $footerBackground;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.footer-data {
+  display: block;
+  margin-right: 70px;
+}
+
+.footer__logo {
+  color: $whiteColor;
+}
+
+.footer__contact {
+  display: flex;
+  width: 230px;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-right: 15px;
+}
+
+.contact__item {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.contact__address {
+  text-decoration: none;
+  color: $whiteColor;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.contact__link {
+  text-decoration: none;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.71;
+  @include transitionStyle;
+
+  &:hover,
+  &:focus {
+    color: $blueColor;
+  }
+}
+
+.footer__titel {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14px;
+  color: $whiteColor;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/*  ======Footer social links==== */
+
+.footer-links {
+  margin-right: 93px;
+}
+
+.footer-links__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.footer-links__link {
+  @extend %centeredFlex;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  margin-left: 10px;
+  border-radius: $roundBorder;
+  background-color: rgba(255, 255, 255, 0.1);
+  @include transitionStyle(background-color);
+
+  &--first {
+    margin-left: 0;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $blueColor;
+  }
+}
+
+/*=======Subscribe form ======*/
+
+.subscribe {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe__form-input {
+  width: 358px;
+  padding: 15px 16px;
+  background-color: $footerBackground;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+
+  &:focus {
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+  }
+}
+
+.subscribe__button {
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  padding-left: 29px;
+  padding-right: 62px;
+  align-items: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 28px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/svg/send.svg);
+    background-repeat: no-repeat;
+  }
+}

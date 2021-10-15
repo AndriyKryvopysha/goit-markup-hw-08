@@ -1,0 +1,20 @@
+/* ==== Logo ==== */
+
+.logo {
+  font-family: $secondaryFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $blueColor;
+  text-decoration: none;
+}
+
+.logo--margin {
+  display: inline-block;
+  margin-right: 93px;
+}
+
+.header__logo {
+  color: $blackColor;
+}
