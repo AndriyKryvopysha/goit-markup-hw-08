@@ -1,10 +1,18 @@
 @import './utils/_color_fonts.Scss';
-@import './utils/placeholders';
+
+@import './utils/_small_reset.Scss';
+@import './components/logo';
+@import './components/header';
+
+/*
 @import './utils/mixins';
 @import './utils/each';
-@import './utils/_small_reset.Scss';
-@import './components/header';
-@import './components/logo';
+
+
+
+
+
+@import './utils/placeholders';
 @import './components/hero';
 @import './components/filter';
 @import './components/projects';
@@ -14,4 +22,4 @@
 @import './components/social-icons';
 @import './components/clients';
 @import './components/footer';
-@import './components/modal';
+@import './components/modal'; */

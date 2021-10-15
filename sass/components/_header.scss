@@ -4,100 +4,54 @@ header {
   border-bottom: solid 1px #ececec;
 }
 
-.container {
-  @extend %containerStyle;
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .header {
-  @extend %centeredFlex;
-  align-items: center;
+  //@extend %centeredFlex;
+  //align-items: center;
 }
 
 /* Навигация */
 
 .navigation {
-  display: flex;
-  align-items: center;
+  //display: flex;
+  //align-items: center;
 }
 
 .navigation__list {
-  display: flex;
+  //display: flex;
 }
 
 .navigation__link {
-  position: relative;
-  display: block;
+  //position: relative;
+  //display: block;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.17;
   color: $blackColor;
-  @include transitionStyle;
+  // @include transitionStyle;
 
   &:hover,
   &:focus {
     color: $blueColor;
   }
 
-  &--current::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -33px;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $blueColor;
-  }
-}
-
-.navigation__item {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin-right: 50px;
-
-  &:last-child {
-    margin-right: 0px;
-  }
-}
-
-.auth {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-left: auto;
-}
-
-.auth__link {
-  display: flex;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  color: $greyColor;
-  transition-property: color fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
+  &--current {
     color: $blueColor;
-    fill: $blueColor;
   }
 }
 
-.auth__icon {
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.auth__item {
-  margin-right: 50px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  &:last-child {
-    margin-right: 0px;
+@media screen and (max-width: 767px) {
+  .auth__icon {
+    display: none;
   }
 }
