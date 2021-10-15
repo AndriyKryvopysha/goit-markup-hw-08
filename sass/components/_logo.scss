@@ -1,6 +1,7 @@
 /* ==== Logo ==== */
 
 .logo {
+  display: block;
   font-family: $secondaryFont;
   font-style: normal;
   font-weight: bold;
@@ -11,7 +12,9 @@
 }
 
 .logo--margin {
-  display: inline-block;
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .header__logo {

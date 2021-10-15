@@ -4,13 +4,22 @@ header {
   border-bottom: solid 1px #ececec;
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (max-width: 767px) {
+    width: 480px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
   }
 }
 
@@ -22,8 +31,15 @@ header {
 /* Навигация */
 
 .navigation {
-  //display: flex;
-  //align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .navigation__list {
