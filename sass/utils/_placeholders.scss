@@ -10,17 +10,16 @@
 
 %titleStyle {
   font-weight: 700;
-  font-size: 36px;
   line-height: 1.17;
   text-align: center;
   margin-top: 0px;
-  margin-bottom: 50px;
-}
 
-%containerStyle {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  @media screen and (max-width: 1199px) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }

@@ -1,20 +1,20 @@
 /*  ====Header==== */
 
 header {
+  position: relative;
   border-bottom: solid 1px #ececec;
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  @extend %marginCentered;
   padding-left: 15px;
   padding-right: 15px;
 
   @media screen and (max-width: 767px) {
-    width: 480px;
+    max-width: 480px;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     width: 768px;
   }
 
@@ -34,16 +34,79 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-  &__menu {
-    display: block;
-    width: 40px;
-    height: 40px;
+.navigation__button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: $whiteColor;
+
+  &:hover,
+  &:focus .navigation__icon {
+    fill: $blueColor;
   }
+}
+
+.navigation__icon {
+  width: 24px;
+  height: 16px;
+}
+
+.navigation__menu {
+  display: none;
+
+  &.is-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 48px 40px;
+    background-color: $whiteColor;
+    z-index: 5;
+  }
+}
+
+.navigation__close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: $whiteColor;
+
+  &:hover,
+  &:focus .icon-close {
+    fill: $blueColor;
+  }
+}
+
+.close-icon {
+  width: 19px;
+  height: 19px;
 }
 
 .navigation__list {
   //display: flex;
+}
+
+.navigation__item:nth-child(1) {
+  margin-bottom: 36px;
+}
+
+.navigation__item:nth-child(2) {
+  margin-bottom: 32px;
+}
+
+.navigation__item:nth-child(3) {
+  margin-bottom: 302px;
 }
 
 .navigation__link {
@@ -66,8 +129,63 @@ header {
   }
 }
 
+.auth__item {
+  font-family: $mainFont;
+  font-weight: 500;
+
+  &:nth-child(1) {
+    margin-bottom: 32px;
+  }
+}
+
+.auth__tel {
+  text-decoration: none;
+  font-size: 34px;
+  line-height: 1.17;
+  color: $blueColor;
+}
+
+.auth__mail {
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 1.17;
+  color: $greyColor;
+}
+
 @media screen and (max-width: 767px) {
   .auth__icon {
     display: none;
+  }
+}
+
+.social {
+  display: flex;
+  margin-top: 64px;
+
+  &--styles {
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $blueColor;
+    text-decoration: none;
+  }
+}
+.social__item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    content: '';
+    display: block;
+    width: 22px;
+    transform: rotate(90deg);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
   }
 }

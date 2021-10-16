@@ -2,6 +2,12 @@
 
 .example {
   padding-bottom: 94px;
+
+  @media screen and (max-width: 767px) {
+    & {
+      display: none;
+    }
+  }
 }
 
 .example__title {
