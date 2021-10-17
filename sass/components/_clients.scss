@@ -12,7 +12,7 @@
 .clients__list {
   @extend %centeredFlex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 450px;
   margin-top: 0px;
   @extend %marginCentered;
@@ -22,7 +22,7 @@
   @extend %centeredFlex;
   align-items: center;
   height: 92px;
-  width: 210px;
+  max-width: 210px;
   border: 1px $LinkColor solid;
   border-radius: 4px;
   color: $LinkColor;
@@ -37,13 +37,15 @@
   }
 }
 
-.clients__member:nth-child(n + 3) {
-  margin-top: 30px;
-}
+.clients__member {
+  width: calc(50% - 60px);
 
-@media screen and (max-width: 449px) {
-  .clients__member:nth-child(2) {
+  &:nth-child(n + 3) {
     margin-top: 30px;
+  }
+
+  &:nth-child(2n) {
+    margin-left: 30px;
   }
 }
 

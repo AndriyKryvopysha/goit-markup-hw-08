@@ -1,13 +1,15 @@
 /*================================ Page Portfolio Фильтр =============================================*/
 
 .content {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .filter {
-  @extend %centeredFlex;
-  @extend %marginCentered;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  min-width: 320px;
 }
 
 .filter__button {
@@ -33,4 +35,24 @@
 
 .filter__item + .filter__item {
   margin-left: 8px;
+
+  &:nth-child(4) {
+    margin-left: 0px;
+  }
+
+  &:nth-child(n + 4) {
+    margin-top: 15px;
+  }
+
+  @media screen and (max-width: 381px) {
+    &:nth-child(3) {
+      margin-top: 15px;
+      margin-right: 15px;
+      margin-left: 0px;
+    }
+
+    &:nth-child(5) {
+      margin-left: 0px;
+    }
+  }
 }

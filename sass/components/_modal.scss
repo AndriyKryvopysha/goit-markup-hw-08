@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
@@ -27,7 +27,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
+  width: calc(100% - 30px);
+  max-width: 450px;
   height: auto;
   padding: 40px;
   transform: translate(-50%, -50%) scale(1);
@@ -63,10 +64,11 @@
   @extend %centeredFlex;
   flex-direction: column;
   align-items: center;
-  width: 370px;
+  width: 100%;
 }
 
 .form__titel {
+  width: 100%;
   padding: 0;
   margin: 0;
   margin-bottom: 12px;
@@ -110,7 +112,7 @@
 }
 
 .form-input {
-  width: 370px;
+  width: 100%;
   height: 40px;
   font-family: $mainFont;
   font-style: normal;
