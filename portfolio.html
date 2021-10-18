@@ -16,54 +16,70 @@
     <!--Шапка сайта-->
 
 <header>
-      <div class="container header">
-      <nav class="navigation">
-        <a class="logo logo--margin" lang="en" href="">Web<span class="header__logo">Studio</span></a>
-  
-        <button type="button" class="navigation__button js-open-menu" aria-expanded="false"
-          aria-controls="navigation__menu" data-navigation__button>
-  
-          <svg class="navigation__icon" aria-label="Переключатель мобильного меню">
-            <use class="icon-menu" href="./images/svg/sprite-mobile.svg#icon-menu_24px"></use>
+  <div class="container header">
+    <nav class="navigation">
+      <a class="logo logo--margin" lang="en" href="">Web<span class="header__logo">Studio</span></a>
+
+      <ul class="navigation__list">
+        <li class="navigation__item"><a class="navigation__link"
+            href="./index.html">Студия</a></li>
+        <li class="navigation__item"><a class="navigation__link navigation__link--current" href="./portfolio.html">Портфолио</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="">Контакты</a></li>
+      </ul>
+
+      <button type="button" class="navigation__button js-open-menu" aria-expanded="false"
+        aria-controls="navigation__menu" data-navigation__button>
+
+        <svg class="navigation__icon" aria-label="Переключатель мобильного меню">
+          <use class="icon-menu" href="./images/svg/sprite-mobile.svg#icon-menu_24px"></use>
+        </svg>
+      </button>
+    </nav>
+    <ul class="auth">
+      <li class="auth__item">
+        <a class="auth__link" href="mailto:info@devstudio.com"><svg class="auth__icon" width="16" height="16">
+            <use href="./images/svg/sprite-opt.svg#envelope"></use>
           </svg>
-        </button>
-      </nav>
-      <div class="navigation__menu js-menu-container" id=navigation__menu data-menu>
-        <button class="navigation__close js-close-menu">
-          <svg class="close-icon">
-            <use class="icon-close" href="./images/svg/sprite-mobile.svg#icon-close_24px"></use>
+          info@devstudio.com</a>
+      </li>
+      <li class="auth__item">
+        <a class="auth__link" href="tel:+380961111111"><svg class="auth__icon" width="16" height="16">
+            <use href="./images/svg/sprite-opt.svg#phone"></use>
           </svg>
-        </button>
-        <ul class="navigation__list">
-          <li class="navigation__item"><a class="navigation__link"
-              href="./index.html">Студия</a></li>
-          <li class="navigation__item"><a class="navigation__link navigation__link--current" href="./portfolio.html">Портфолио</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="">Контакты</a></li>
-        </ul>
-  
-        <ul class="auth">
-          <li class="auth__item">
-            <a class="auth__tel" href="tel:+380961111111"><svg class="auth__icon" width="16" height="16">
-                <use href="./images/svg/sprite-opt.svg#phone"></use>
-              </svg>
-              +38 096 111 11 11</a>
-          </li>
-          <li class="auth__item">
-            <a class="auth__mail" href="mailto:info@devstudio.com"><svg class="auth__icon" width="16" height="16">
-                <use href="./images/svg/sprite-opt.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a>
-          </li>
-        </ul>
-        <ul class="social">
-          <li class="social__item"><a class="social--styles" href="">Instagram</a></li>
-          <li class="social__item"><a class="social--styles" href="">Twitter</a></li>
-          <li class="social__item"><a class="social--styles" href="">Facebook</a></li>
-          <li class="social__item"><a class="social--styles" href="">LinkedIn</a></li>
-        </ul>
-      </div>
+          +38 096 111 11 11</a>
+      </li>
+    </ul>
+    <div class="navigation__menu js-menu-container" id=navigation__menu data-menu>
+      <button class="navigation__close js-close-menu">
+        <svg class="close-icon">
+          <use class="icon-close" href="./images/svg/sprite-mobile.svg#icon-close_24px"></use>
+        </svg>
+      </button>
+      <ul class="menu__list">
+        <li class="menu__item"><a class="navigation__link" href="./index.html">Студия</a></li>
+        <li class="menu__item"><a class="navigation__link navigation__link--current" href="./portfolio.html">Портфолио</a></li>
+        <li class="menu__item"><a class="navigation__link" href="">Контакты</a></li>
+      </ul>
+
+      <ul class="menu__auth">
+        <li class="auth__item">
+          <a class="auth__tel" href="tel:+380961111111">
+            +38 096 111 11 11</a>
+        </li>
+        <li class="auth__item">
+          <a class="auth__mail" href="mailto:info@devstudio.com">
+            info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="social">
+        <li class="social__item"><a class="social--styles" href="">Instagram</a></li>
+        <li class="social__item"><a class="social--styles" href="">Twitter</a></li>
+        <li class="social__item"><a class="social--styles" href="">Facebook</a></li>
+        <li class="social__item"><a class="social--styles" href="">LinkedIn</a></li>
+      </ul>
     </div>
-  </header>
+  </div>
+</header>
 
     <main>
       <section class="content">

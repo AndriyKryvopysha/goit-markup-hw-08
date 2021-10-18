@@ -3,6 +3,11 @@
 .clients {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and(min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__title {
@@ -12,17 +17,61 @@
 .clients__list {
   @extend %centeredFlex;
   flex-wrap: wrap;
-  justify-content: center;
-  max-width: 450px;
   margin-top: 0px;
   @extend %marginCentered;
+
+  @media screen and(max-width:767px) {
+    max-width: 450px;
+  }
+
+  @media screen and(min-width:768px) {
+    width: 100%;
+  }
+}
+
+.clients__member {
+  @media screen and(max-width:767px) {
+    width: calc(50% - 60px);
+    min-width: 91px;
+
+    &:nth-child(n + 3) {
+      margin-top: 30px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+  }
+
+  @media screen and(min-width:768px) and(max-width:1199px) {
+    width: 226px;
+
+    &:nth-child(n + 4) {
+      margin-top: 30px;
+    }
+
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 0px;
+    }
+  }
+
+  @media screen and(min-width:1200px) {
+    width: 170px;
+
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
 }
 
 .clients__link {
   @extend %centeredFlex;
   align-items: center;
   height: 92px;
-  max-width: 210px;
   border: 1px $LinkColor solid;
   border-radius: 4px;
   color: $LinkColor;
@@ -35,17 +84,17 @@
     border-color: $blueColor;
     color: $blueColor;
   }
-}
 
-.clients__member {
-  width: calc(50% - 60px);
-
-  &:nth-child(n + 3) {
-    margin-top: 30px;
+  @media screen and(max-width:767px) {
+    max-width: 210px;
   }
 
-  &:nth-child(2n) {
-    margin-left: 30px;
+  @media screen and(min-width:768px) and(max-width:1199px) {
+    width: 226px;
+  }
+
+  @media screen and(min-width:1200px) {
+    width: 170px;
   }
 }
 

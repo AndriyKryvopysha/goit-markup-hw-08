@@ -1,15 +1,37 @@
 /* Герой */
 .hero {
-  max-width: 480px;
-  height: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  @extend %marginCentered;
   padding-top: 118px;
   padding-bottom: 118px;
-  @extend %marginCentered;
+
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+    height: auto;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/herox2.jpg);
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    min-height: 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/herotx2.jpg);
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    min-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero.jpg);
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -29,11 +51,25 @@
   text-transform: uppercase;
   color: $whiteColor;
   text-align: center;
-  width: 360px;
   padding: 0;
   margin-top: 0px;
   margin-bottom: 30px;
   @extend %marginCentered;
+
+  @media screen and(max-width:767px) {
+    max-width: 360px;
+  }
+
+  @media screen and(min-width:768px) {
+    width: 360px;
+  }
+
+  @media screen and(min-width:1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+    padding: 0px 42px;
+  }
 }
 
 .button {

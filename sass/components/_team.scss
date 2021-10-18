@@ -4,6 +4,11 @@
   background-color: $buttonWhite;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team__title {
@@ -12,23 +17,59 @@
 
 .team__list {
   @extend %centeredFlex;
-  flex-direction: column;
   @extend %marginCentered;
   margin-top: 0px;
   background-color: $buttonWhite;
+
+  @media screen and(max-width:767px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  @media screen and(min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .member {
   background-color: $whiteColor;
-  max-width: 450px;
   text-align: center;
   padding-bottom: 0px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:first-child) {
-    margin-top: 30px;
+  @media screen and(max-width: 767px) {
+    max-width: 450px;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    flex-basis: 354px;
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: 270px;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-left: 0px;
+    }
   }
 }
 

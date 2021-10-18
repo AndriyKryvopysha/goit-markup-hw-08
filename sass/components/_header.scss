@@ -24,8 +24,11 @@ header {
 }
 
 .header {
-  //@extend %centeredFlex;
-  //align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* Навигация */
@@ -33,7 +36,10 @@ header {
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
 .navigation__button {
@@ -47,6 +53,10 @@ header {
   &:hover,
   &:focus .navigation__icon {
     fill: $blueColor;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 
@@ -94,30 +104,54 @@ header {
 }
 
 .navigation__list {
-  //display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
-.navigation__item:nth-child(1) {
+.menu__item:nth-child(1) {
   margin-bottom: 36px;
 }
 
-.navigation__item:nth-child(2) {
+.menu__item:nth-child(2) {
   margin-bottom: 32px;
 }
 
-.navigation__item:nth-child(3) {
+.menu__item:nth-child(3) {
   margin-bottom: 302px;
 }
 
+.navigation__item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
 .navigation__link {
-  //position: relative;
-  //display: block;
   text-decoration: none;
   font-weight: 500;
-  font-size: 40px;
-  line-height: 1.17;
   color: $blackColor;
-  // @include transitionStyle;
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    line-height: 1.14;
+    @include transitionStyle;
+  }
 
   &:hover,
   &:focus {
@@ -127,14 +161,86 @@ header {
   &--current {
     color: $blueColor;
   }
+
+  &--current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -33px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $blueColor;
+  }
+}
+
+.auth {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .auth__item {
   font-family: $mainFont;
   font-weight: 500;
 
-  &:nth-child(1) {
-    margin-bottom: 32px;
+  @media screen and (max-width: 767px) {
+    &:nth-child(1) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    &:nth-child(1) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-right: 50px;
+    margin-bottom: 0px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.auth__link {
+  display: flex;
+  text-decoration: none;
+  font-weight: 500;
+  color: $greyColor;
+  transition-property: color fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $blueColor;
+    fill: $blueColor;
+  }
+
+  @media screen and(max-width:1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+
+  @media screen and(min-width:1200px) {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -152,9 +258,15 @@ header {
   color: $greyColor;
 }
 
-@media screen and (max-width: 767px) {
-  .auth__icon {
-    display: none;
+.auth__icon {
+  fill: currentColor;
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
   }
 }
 

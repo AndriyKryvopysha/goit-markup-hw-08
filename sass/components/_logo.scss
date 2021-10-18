@@ -9,12 +9,31 @@
   line-height: 1.17;
   color: $blueColor;
   text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+  }
 }
 
 .logo--margin {
   display: block;
-  padding-top: 16px;
-  padding-bottom: 16px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 
 .header__logo {
