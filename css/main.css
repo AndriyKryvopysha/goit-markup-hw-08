@@ -904,16 +904,38 @@ header {
   padding-bottom: 60px;
 }
 
-.filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  min-width: 320px;
+@media screen and (min-width: 1200px) {
+  .content {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    min-width: 320px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: auto;
+    margin-top: auto;
+  }
 }
 
 .filter__button {
@@ -944,12 +966,13 @@ header {
   margin-left: 8px;
 }
 
-.filter__item + .filter__item:nth-child(4) {
-  margin-left: 0px;
-}
-
-.filter__item + .filter__item:nth-child(n + 4) {
-  margin-top: 15px;
+@media screen and (max-width: 767px) {
+  .filter__item + .filter__item:nth-child(4) {
+    margin-left: 0px;
+  }
+  .filter__item + .filter__item:nth-child(n + 4) {
+    margin-top: 15px;
+  }
 }
 
 @media screen and (max-width: 381px) {
@@ -964,8 +987,38 @@ header {
 }
 
 /* Main content */
-.projects {
-  margin-top: 40px;
+@media screen and (max-width: 767px) {
+  .projects {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 50px;
+  }
 }
 
 .projects__item {
@@ -976,8 +1029,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 450px;
-  margin-bottom: 30px;
   outline: 1px solid #eeeeee;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
@@ -994,8 +1045,42 @@ header {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.projects__item:last-child {
-  margin-bottom: 0;
+@media screen and (max-width: 767px) {
+  .projects__item {
+    max-width: 450px;
+    margin-bottom: 30px;
+  }
+  .projects__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects__item {
+    -ms-flex-preferred-size: 354px;
+        flex-basis: 354px;
+  }
+  .projects__item:nth-child(2n) {
+    margin-left: 30px;
+  }
+  .projects__item:nth-child(n + 3) {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    -ms-flex-preferred-size: 370px;
+        flex-basis: 370px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+  .projects__item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .projects__item:nth-child(n + 7) {
+    margin-bottom: 0;
+  }
 }
 
 .overlay {
@@ -1005,7 +1090,7 @@ header {
 
 .overlay__img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -1013,8 +1098,7 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  height: auto;
-  padding: 77px 24px;
+  height: 100%;
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
@@ -1029,6 +1113,24 @@ header {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 767px) {
+  .overlay__text {
+    padding: 77px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .overlay__text {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay__text {
+    padding: 63px 24px;
+  }
 }
 
 .projects__item:hover .overlay__text {

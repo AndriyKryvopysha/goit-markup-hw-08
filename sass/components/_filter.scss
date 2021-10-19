@@ -3,13 +3,27 @@
 .content {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filter {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  min-width: 320px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-width: 320px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-top: auto;
+  }
 }
 
 .filter__button {
@@ -36,12 +50,14 @@
 .filter__item + .filter__item {
   margin-left: 8px;
 
-  &:nth-child(4) {
-    margin-left: 0px;
-  }
+  @media screen and (max-width: 767px) {
+    &:nth-child(4) {
+      margin-left: 0px;
+    }
 
-  &:nth-child(n + 4) {
-    margin-top: 15px;
+    &:nth-child(n + 4) {
+      margin-top: 15px;
+    }
   }
 
   @media screen and (max-width: 381px) {
